@@ -1,0 +1,215 @@
+{
+  "brand": {
+    "season": "SS 2026",
+    "established": "MMXXVI",
+    "theme": "Monochrome editorial tailoring"
+  },
+  "hero": {
+    "headline": "The New Silhouette",
+    "subheadline": "SS 2026",
+    "body": "Structured form. Quiet confidence. A collection built for those who move through the world with deliberate ease.",
+    "cta": "View Collection",
+    "image": "/images/hero/hero-main.jpg",
+    "presentation": {
+      "layout": "offset-split",
+      "imageMode": "full-height crop",
+      "overlay": "left-dark-gradient"
+    }
+  },
+  "looks": [
+    {
+      "id": "look-01",
+      "number": "01",
+      "name": "Structured Jacket",
+      "category": "Outerwear",
+      "description": "A tailored blazer cut for presence. Sharp shoulders, rolled cuff contrast, and a silhouette that reads authority without effort.",
+      "layout": "fullbleed",
+      "special": true,
+      "images": [
+        {
+          "src": "/images/looks/look-01/structured-jacket-main.jpg",
+          "name": "structured-jacket-main",
+          "width": 687,
+          "height": 1031,
+          "aspectRatio": 0.666
+        },
+        {
+          "src": "/images/looks/look-01/structured-jacket-alt.jpg",
+          "name": "structured-jacket-alt",
+          "width": 500,
+          "height": 500,
+          "aspectRatio": 1.0
+        }
+      ],
+      "detailMode": "diptych",
+      "interaction": "open lightbox with both images"
+    },
+    {
+      "id": "look-02",
+      "number": "02",
+      "name": "Soft Volume Set",
+      "category": "Editorial",
+      "description": "Relaxed volume and soft geometry. One calm portrait, held in negative space.",
+      "layout": "centered",
+      "special": false,
+      "images": [
+        {
+          "src": "/images/looks/look-02/soft-volume-set-main.jpg",
+          "name": "soft-volume-set-main",
+          "width": 880,
+          "height": 880,
+          "aspectRatio": 1.0
+        }
+      ],
+      "detailMode": "single-image",
+      "interaction": "expand portrait in place"
+    },
+    {
+      "id": "look-03",
+      "number": "03",
+      "name": "Tailored Black Lounge",
+      "category": "Tailoring",
+      "description": "Black-on-black styling cut with restraint. Four frames — distance, form, presence, silhouette.",
+      "layout": "sticky",
+      "special": true,
+      "images": [
+        {
+          "src": "/images/looks/look-03/lounge-wide.jpg",
+          "name": "lounge-wide",
+          "width": 4000,
+          "height": 6000,
+          "aspectRatio": 0.667
+        },
+        {
+          "src": "/images/looks/look-03/lounge-mid.jpg",
+          "name": "lounge-mid",
+          "width": 4000,
+          "height": 6000,
+          "aspectRatio": 0.667
+        },
+        {
+          "src": "/images/looks/look-03/lounge-close.jpg",
+          "name": "lounge-close",
+          "width": 4000,
+          "height": 6000,
+          "aspectRatio": 0.667
+        },
+        {
+          "src": "/images/looks/look-03/lounge-profile.jpg",
+          "name": "lounge-profile",
+          "width": 4000,
+          "height": 6000,
+          "aspectRatio": 0.667
+        }
+      ],
+      "detailMode": "stacked-sticky",
+      "interaction": "sticky text, scrolling image stack"
+    },
+    {
+      "id": "look-04",
+      "number": "04",
+      "name": "Scarlet Gesture",
+      "category": "Statement",
+      "description": "Strong gesture, clean framing. Works best as a dramatic cropped pair.",
+      "layout": "split",
+      "special": true,
+      "images": [
+        {
+          "src": "/images/looks/look-04/scarlet-gesture-main.jpg",
+          "name": "scarlet-gesture-main",
+          "width": 765,
+          "height": 956,
+          "aspectRatio": 0.8
+        },
+        {
+          "src": "/images/looks/look-04/scarlet-gesture-detail.jpg",
+          "name": "scarlet-gesture-detail",
+          "width": 765,
+          "height": 956,
+          "aspectRatio": 0.8
+        }
+      ],
+      "detailMode": "crop-pair",
+      "interaction": "swap between portrait and detail on hover or click"
+    },
+    {
+      "id": "look-05",
+      "number": "05",
+      "name": "Wind Trench Story",
+      "category": "Outerwear",
+      "description": "A singular frame. Controlled movement, architectural setting, and a quieter tonal shift inside the collection.",
+      "layout": "feature-single",
+      "special": true,
+      "images": [
+        {
+          "src": "/images/looks/look-05/wind-trench-feature.jpg",
+          "name": "wind-trench-feature",
+          "width": 4000,
+          "height": 6000,
+          "aspectRatio": 0.667
+        }
+      ],
+      "detailMode": "single-feature",
+      "interaction": "static feature image with minimal copy"
+    },
+    {
+      "id": "look-06",
+      "number": "06",
+      "name": "Graphite Portrait",
+      "category": "Portrait Study",
+      "description": "A portrait-driven closing set. Four tonal variations, best used as a masonry sequence.",
+      "layout": "masonry",
+      "special": true,
+      "images": [
+        {
+          "src": "/images/looks/look-06/graphite-portrait-main.jpg",
+          "name": "graphite-portrait-main",
+          "width": 735,
+          "height": 980,
+          "aspectRatio": 0.75
+        },
+        {
+          "src": "/images/looks/look-06/graphite-portrait-crop-a.jpg",
+          "name": "graphite-portrait-crop-a",
+          "width": 500,
+          "height": 667,
+          "aspectRatio": 0.75
+        },
+        {
+          "src": "/images/looks/look-06/graphite-portrait-crop-b.jpg",
+          "name": "graphite-portrait-crop-b",
+          "width": 500,
+          "height": 666,
+          "aspectRatio": 0.751
+        },
+        {
+          "src": "/images/looks/look-06/graphite-portrait-profile.jpg",
+          "name": "graphite-portrait-profile",
+          "width": 500,
+          "height": 667,
+          "aspectRatio": 0.75
+        }
+      ],
+      "detailMode": "masonry-gallery",
+      "interaction": "open masonry items into modal carousel"
+    }
+  ],
+  "editorial": [
+    {
+      "id": "ed-01",
+      "title": "Form Follows Feeling",
+      "image": "/images/editorial/form-follows-feeling-clean.jpg",
+      "relatedLooks": [
+        "look-03"
+      ]
+    },
+    {
+      "id": "ed-02",
+      "title": "The Weight of Fabric",
+      "image": "/images/editorial/the-weight-of-fabric.jpg",
+      "relatedLooks": [
+        "look-06"
+      ]
+    }
+  ]
+}

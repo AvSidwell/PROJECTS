@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette */
+  --color-black: #0a0a0a;
+  --color-offwhite: #f5f2ed;
+  --color-warm-gray: #b0aaa5;
+  --color-gold: #b89a6a;
+
+  /* Typography roles */
+  --font-brand: var(--font-panchang);     /* brand name / display */
+  --font-heading: var(--font-melodrama);  /* section headings */
+  --font-body: var(--font-gambetta);      /* paragraphs */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+html {
+  background-color: var(--color-black);
+  color: var(--color-offwhite);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ─── Editorial CTA ─── */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(243, 239, 232, 0.92);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-family: var(--font-brand);
+}
+
+.hero-cta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(201, 163, 92, 0.7);
+  transform-origin: left center;
+  transition: transform 220ms ease;
+}
+
+.hero-cta:hover::after {
+  transform: scaleX(1.09);
+}
+
+/* ─── Arrow nudge ─── */
+@keyframes arrowNudge {
+  0%, 100% { transform: translateX(0);   opacity: 1; }
+  50%       { transform: translateX(4px); opacity: 0.35; }
+}
+
+/* ─── Hero entrance animations ─── */
+@keyframes heroImageIn {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1.02); }
+}
+@keyframes heroLineIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero-image-anim {
+  animation: heroImageIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-line-1 {
+  animation: heroLineIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+.hero-line-2 {
+  animation: heroLineIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+.hero-body-anim {
+  animation: heroFadeIn 0.7s ease 0.7s both;
+}
+.hero-cta-anim {
+  animation: heroFadeIn 0.6s ease 1s both;
+}
+
+/* ─── Footer nav links ─── */
+.footer-nav-link {
+  font-family: var(--font-brand);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(243, 239, 232, 0.4);
+  transition: color 200ms ease;
+}
+.footer-nav-link:hover {
+  color: rgba(243, 239, 232, 0.88);
+}
+
+/* ─── Clickable look image hover ─── */
+.look-clickable {
+  transition: opacity 200ms ease;
+}
+.look-clickable:hover {
+  opacity: 0.88;
+  outline: 1px solid rgba(201, 163, 92, 0.3);
+}
+
+/* ─── Mobile section padding ─── */
+@media (max-width: 640px) {
+  #collection > section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}

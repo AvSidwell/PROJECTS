@@ -61,7 +61,7 @@ export default function Footer({ season, established }: Props) {
           color: "rgba(176,170,165,0.4)",
           whiteSpace: "nowrap",
         }}>
-          © {new Date().getFullYear()}
+          © {new Date().getFullYear()} by AvSidwell
         </p>
         <div style={{ flex: 1, height: 1, backgroundColor: "rgba(201,163,92,0.08)" }} />
       </div>

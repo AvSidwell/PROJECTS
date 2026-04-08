@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+/* ─── Design tokens ─────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-base:    #080a09;
+  --bg-outer:   #111413;
+  --bg-inner:   #0d0f0e;
+  --bg-card:    #131513;
+
+  /* Frame / divider lines */
+  --frame-blue: #1a5eb8;
+  --cyan:       #00e5c8;
+  --cyan-dim:   #00b89e;
+
+  /* Accents */
+  --pink:       #e8147a;
+  --pink-dark:  #c0106a;
+
+  /* Text */
+  --text-hi:    #efefef;
+  --text-mid:   #a0a09a;
+  --text-lo:    #555850;
+
+  /* Fonts */
+  --ff-display: var(--font-display, "Georgia", serif);
+  --ff-mono:    var(--font-mono, "Courier New", monospace);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-outer);
+  color: var(--text-hi);
+}
+
+/* ─── Typography helpers ─────────────────────────────────────────────── */
+
+/* Big theatrical section title */
+.title-display {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  letter-spacing: 0.38em;
+  color: var(--pink);
+  text-align: center;
+  line-height: 1;
+}
+
+/* Mono label key  (Name:) */
+.lk {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-hi);
+  text-transform: none;
+}
+
+/* Mono label value */
+.lv {
+  font-family: var(--ff-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  color: var(--pink);
+}
+
+/* Cyan description copy */
+.dc {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--cyan-dim);
+  line-height: 1.7;
+}
+
+/* ─── Divider lines ──────────────────────────────────────────────────── */
+.divider-cyan {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan) 20%, var(--cyan) 80%, transparent);
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+.divider-pink {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pink) 20%, var(--pink) 80%, transparent);
+  opacity: 0.35;
+  flex-shrink: 0;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--bg-inner); }
+::-webkit-scrollbar-thumb { background: var(--pink-dark); }
+
+/* ─── Dot indicators ─────────────────────────────────────────────────── */
+.dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--text-lo);
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.dot.on { background: var(--pink); }
+
+/* ─── Skill/filter tab ───────────────────────────────────────────────── */
+.stab {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem;
+  background: transparent;
+  border: 1px solid var(--text-lo);
+  color: var(--text-lo);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.stab:hover, .stab.on {
+  border-color: var(--pink);
+  color: var(--pink);
+  background: rgba(232,20,122,0.07);
+}
+
+/* ─── Thin outline buttons ───────────────────────────────────────────── */
+.btn-outline {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  padding: 0.4rem 1.4rem;
+  background: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-outline:hover { opacity: 0.72; }
+.btn-outline-cyan  { border-color: var(--cyan);      color: var(--cyan); }
+.btn-outline-muted { border-color: var(--text-lo);   color: var(--text-mid); }
+.btn-outline-pink  { border-color: var(--pink);      color: var(--pink); }
+
+/* ─── Dark outline input / textarea ─────────────────────────────────── */
+.field {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid #2a2e2c;
+  color: var(--text-hi);
+  padding: 0.55rem 0.75rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  resize: none;
+}
+.field::placeholder { color: var(--text-lo); }
+.field:focus        { border-color: var(--pink); }
+
+/* ─── Social badge circle ────────────────────────────────────────────── */
+.social-badge {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1px solid #2e3231;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-mono);
+  font-size: 0.55rem;
+  color: var(--text-lo);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.social-badge:hover { border-color: var(--pink); color: var(--pink); }
+
+/* ─── Sidebar nav button ─────────────────────────────────────────────── */
+.nav-btn {
+  background: none; border: none; cursor: pointer;
+  color: #3a3f3d;
+  padding: 6px;
+  display: flex; align-items: center; justify-content: center;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-btn:hover { color: #666; }
+.nav-btn.on    { color: var(--pink); }
+/* active left-side indicator bar */
+.nav-btn.on::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 20%; bottom: 20%;
+  width: 2px;
+  background: var(--pink);
+}
+
+/* ─── Section fade-in ────────────────────────────────────────────────── */
+@keyframes sectionIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-in { animation: sectionIn 0.35s ease forwards; }
